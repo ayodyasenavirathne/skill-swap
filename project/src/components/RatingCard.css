@@ -1,0 +1,145 @@
+.rating-card {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #304146; /* Dark background */
+  border-radius: 30px;
+  font-family: Arial, sans-serif;
+  color: #000000;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  background: #40575c;
+  padding: 6px;
+  border-radius: 30px;
+  margin-bottom: 30px;
+}
+
+.avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.user-name {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.stars {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0;
+  gap: 5px;
+}
+
+.star {
+  font-size: 50px;
+  color: #666;
+  cursor: pointer;
+  transition: color 0.2s ease, transform 0.1s ease;
+  user-select: none;
+}
+
+.star:hover {
+  transform: scale(1.1);
+}
+
+.star.active {
+  color: #ffd700;
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+
+.feedback-box {
+  width: 97%;
+  height: 200px;
+  margin: 0 auto 20px auto;
+  padding: 15px;
+  font-size: 18px;
+  background-color: #ffff;
+  border: none;
+  resize: none;
+  border-radius: 15px;
+  font-family: inherit;
+  outline: none;
+  transition: box-shadow 0.3s ease;
+}
+
+.feedback-box:focus {
+  box-shadow: 0 0 0 3px rgba(0, 128, 255, 0.3);
+}
+
+.feedback-box::placeholder {
+  color: #999;
+}
+
+.rating-value-text {
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  margin: 20px 0;
+  color: #ffd700;
+}
+
+.submit-btn {
+  margin-top: 20px;
+  float: right;
+  padding: 12px 35px;
+  background: linear-gradient(135deg, #0080ff, #0066cc);
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.submit-btn:hover {
+  background: linear-gradient(135deg, #005ecb, #004499);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 128, 255, 0.4);
+}
+
+.submit-btn:active {
+  transform: translateY(0);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .rating-card {
+    margin: 20px;
+    padding: 15px;
+  }
+  
+  .star {
+    font-size: 40px;
+  }
+  
+  .feedback-box {
+    height: 150px;
+    font-size: 16px;
+  }
+  
+  .submit-btn {
+    width: 100%;
+    float: none;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .star {
+    font-size: 35px;
+  }
+  
+  .stars {
+    gap: 2px;
+  }
+}
